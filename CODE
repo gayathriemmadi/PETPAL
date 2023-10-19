@@ -1,0 +1,941 @@
+packagecom.pl7k41a05g6.mad_courseproject;
+importandroidx.appcompat.app.AppCompatActivity;
+importandroid.content.Intent;
+importandroid.cs.Bundle;
+importandroid.view.View;
+publicclassschweekextendsAppCompatActivity{
+
+@Override
+protectedvoidonCreate(BundlesavedinstanceState){
+super.onCreate(savedinstanceState);
+setContentView(R.layout.activity_sch_week);
+	}
+publicvoidmonday(Viewview){
+Intenti=newIntent(this,activity_monday.class);
+startActivity(i);
+
+	}
+
+publicvoidtuesday(Viewview){
+Intenti=newIntent(this,activity_tuesday.class);
+startActivity(i);
+	}
+
+publicvoidwednesday(Viewview){
+Intenti=newIntent(this,activity_wednesday.class);
+startActivity(i);
+	}
+
+publicvoidthursday(Viewview){
+Intenti=newIntent(this,activity_thursday.class);
+startActivity(i);
+	}
+
+publicvoidfriday(Viewview){
+Intenti=newIntent(this,activity_friday.class);
+startActivity(i);
+	}
+
+publicvoidsaturday(Viewview){
+Intenti=newIntent(this,activity_saturday.class);
+startActivity(i);
+	}
+
+publicvoidsunday(Viewview){
+Intenti=newIntent(this,activity_sunday.class);
+startActivity(i);
+
+	}
+}
+
+packagecom.pl7k41a05g6.mad_courseproject;
+importandroidx.appcompat.app.AppCompatActivity;
+importandroidx.constraintlayout.widget.Constraintlayout;
+importandroid.content.SharedPreferences;
+importandroid.graphics.Paint;
+importandroid.as.Bundle;
+importandroid.view.View;
+importandroid.view.ViewGroup;
+importandroid.widget.Button;
+importandroid.widget.CheckBox;
+importandroid.widget.CompoundButton;
+importandroid.widget.EditText;
+importandroid.widget.Linearlayout;
+importandroid.widget.Relativelayout;
+importandroid.widget.Toast;
+
+ publicclass create list extendsAppCompatActivity{ 20
+	EditTextetl,et2,et3,et4,et5,et6,et7,et8,et9,et10
+,etll,et12,et13,
+		et14, et15, et16, et17, et18, et19, et20, et21, et22,et23,et24;
+
+	CheckBoxcbl,cb2,cb3,cb4,cb5,cb6,cb7,cb8,cb9,cb10
+,cbll,cb12,cb13,cb14,cb15,cb16,cb17,cb18,cb19,
+	cb20, cb21, cb22, cb23, cb24; 26
+	CheckBox st_cbl, st_cb2, st_cb3, st_cb4, st_cb5, st_cb6, st_cb7, st_cb8, st_cb9, st_cb10, st_cbll, st_cb12, st_cb13,
+	st_cb14, st_cb15, st_cb16, st_cb17, st_cb18, st_cb19, st_cb20, st_cb21, st_cb22, st_cb23, st_cb24;
+
+@Override
+protectedvoidonCreate(BundlesavedlnstanceState){
+super.onCreate(savedlnstanceState);
+setContentView(R.layout.activity_create_list);
+
+etl=findViewByld(R.id.etl);
+et2=findViewByld(R.id.et2);
+et3=findViewByld(R.id.et3);
+et4=findViewByld(R.id.et4);
+et5=findViewByld(R.id.et5);
+et6=findViewByld(R.id.et6);
+et7=findViewByld(R.id.et7);
+et8=findViewByld(R.id.et8);
+et9=findViewByld(R.id.et9);
+et10=findViewByld(R.id.et10);
+etll=findViewByld(R.id.etll);
+
+et12
+=findViewByid(R.id.et12);
+
+et13
+=findViewByid(R.id.et13);
+
+
+et14
+=findViewByid(R.id.et14);
+
+
+et15
+=findViewByid(R.id.et15);
+
+
+et16
+=findViewByid(R.id.et16);
+
+
+et17
+=findViewByid(R.id.et17);
+
+
+et18
+=findViewByid(R.id.et18);
+
+
+et19
+=findViewByid(R.id.et19);
+
+
+et20
+=findViewByid(R.id.et20);
+
+
+et21
+=findViewByid(R.id.et21);
+
+
+et22
+=findViewByid(R.id.et22);
+
+
+et23
+=findViewByid(R.id.et23);
+
+
+et24
+=findViewByid(R.id.et24);
+
+
+
+
+
+cbl=findViewByid(R.id.cbl);
+cb2=findViewByid(R.id.cb2);
+cb3=findViewByid(R.id.cb3);
+cb4=findViewByid(R.id.cb4);
+cb5=findViewByid(R.id.cb5);
+cb6=findViewByid(R.id.cb6);
+cb7=findViewByid(R.id.cb7);
+cb8=findViewByid(R.id.cb8);
+cb9=findViewByid(R.id.cb9);
+cb10=findViewByid(R.id.cb10);
+cbll=findViewByid(R.id.cbll);
+cb12=findViewByid(R.id.cb12);
+cb13=findViewByid(R.id.cb13);
+cb14=findViewByid(R.id.cb14);
+cb15=findViewByid(R.id.cb15);
+cb16=findViewByid(R.id.cb16);
+cb17=findViewByid(R.id.cb17);
+cb18=findViewByid(R.id.cb18);
+cb19=findViewByid(R.id.cb19);
+cb20=findViewByid(R.id.cb20);
+cb21=findViewByid(R.id.cb21);
+cb22=findViewByid(R.id.cb22);
+cb23=findViewByid(R.id.cb23);
+cb24=findViewByid(R.id.cb24);
+
+st_cbl=findViewByid(R.id.star_cbl);
+st_cb2=findViewByid(R.id.star_cb2);
+st_cb3=findViewByid(R.id.star_cb3);
+st_cb4=findViewByid(R.id.star_cb4);
+st_cb5=findViewByid(R.id.star_cb5);
+st_cb6=findViewByid(R.id.star_cb6);
+st_cb7=findViewByid(R.id.star_cb7);
+st_cb8=findViewByid(R.id.star_cb8);
+st_cb9=findViewByid(R.id.star_cb9);
+st_cb10=findViewByid(R.id.star_cb10);
+st_cbll=findViewByid(R.id.star_cbll);
+
+st_cb12=findViewByid(R.id.star_cb12);
+st_cb13=findViewByid(R.id.star_cb13);
+st_cb14=findViewByid(R.id.star_cb14);
+st_cb15=findViewByid(R.id.star_cb15);
+st_cb16=findViewByid(R.id.star_cb16);
+st_cb17=findViewByid(R.id.star_cb17);
+st_cb18=findViewByid(R.id.star_cb18);
+st_cb19=findViewByid(R.id.star_cb19);
+st_cb20=findViewByid(R.id.star_cb20);
+st_cb21=findViewByid(R.id.star_cb21);
+st_cb22=findViewByid(R.id.star_cb22);
+st_cb23=findViewByid(R.id.star_cb23);
+st_cb24=findViewByid(R.id.star_cb24);
+
+	SharedPreferences prefs= getApplicationContext(). getSharedPreferences(11prf11,MODE_PRIVATE);
+
+Stringssl=prefs.getString(11sl11
+etl.setText(ssl);
+ 
+1111
+);
+
+Stringss2=prefs.getString(11s211
+et2.setText(ss2);
+ 
+1111
+);
+
+Stringss3=prefs.getString(11s311
+et3.setText(ss3);
+ 
+1111
+);
+
+Stringss4=prefs.getString(11s411,1111);
+et4.setText(ss4);
+
+Stringss5=prefs.getString(115511
+et5.setText(ss5);
+Stringss6=prefs.getString(11S611
+et6.setText(ss6);
+ 
+1111
+);
+1111
+);
+Stringss7=prefs.getString(11s711
+et7.setText(ss7);
+Stringss8=prefs.getString(11s811
+et8.setText(ss8);
+ 
+1111
+);
+1111
+);
+Stringss9=prefs.getString(11s911,1111);
+Stringss18=prefs.getString("s18","");
+et18.setText(ss18);
+Stringss19=prefs.getString("s19","");
+et19.setText(ss19);
+Stringss20=prefs.getString("s20","");
+et20.setText(ss20);
+Stringss2l=prefs.getString("s21","");
+et21.setText(ss21);
+Stringss22=prefs.getString("s22","");
+et22.setText(ss22);
+Stringss23=prefs.getString("s23","");
+et23.setText(ss23);
+Stringss24=prefs.getString("s24","");
+et24.setText(ss24);
+loadPrefs();
+}
+privatevoidloadPrefs(){
+SharedPreferencesprefs=getApplicationContext().
+getSharedPreferences("prf",MODE_PRIVATE);
+booleancbValuel=prefs.getBoolean("CHECKBOXl",false);
+cbl.setChecked(cbValuel);
+if(cbl.isChecked())
+	etl.setPaintFlags(etl.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cbl.setOnClicklistener(newView.OnClicklistener(){
+@Override
+publicvoidonClick(Viewv){
+if(cbl.isChecked())
+	etl.setPaintFlags(etl.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+etl.setPaintFlags(etl.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+
+booleancbValue2=prefs.getBoolean("CHECKBOX2",false);
+cb2.setChecked(cbValue2);
+if(cb2.isChecked())
+	et2.setPaintFlags(et2.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb2.setOnClickListener(newView.OnClickListener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb2.isChecked())
+	et2.setPaintFlags(et2.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+
+else
+et2.setPaintFlags(et2.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+booleancbValue3=prefs.getBoolean("CHECKBOX3",false);
+cb3.setChecked(cbValue3);
+if(cb3.isChecked())
+	et3.setPaintFlags(et3.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb3.setOnClickListener(newView.OnClickListener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb3.isChecked())
+	et3.setPaintFlags(et3.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et3.setPaintFlags(et3.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));	}
+	});
+
+booleancbValue4=prefs.getBoolean("CHECKBOX4",false);
+cb4.setChecked(cbValue4);
+if(cb4.isChecked())
+	et4.setPaintFlags(et4.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb4.setOnClickListener(newView.OnClickListener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb4.isChecked())
+	et4.setPaintFlags(et4.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et4.setPaintFlags(et4.getPaintFlags
+()
+&
+(~
+Paint.STRIKE_THRU_TEXT_FLAG));
+
+}
+});
+booleancbValue5=prefs.getBoolean("CHECKBOXS",false);
+cb5.setChecked(cbValue5);
+if(cb5.isChecked())
+et5.setPaintFlags(et5.getPaintFlags()IPaint.
+STRIKE_THRU_TEXT_FLAG);
+cbS.setOnClicklistener(newView.OnClicklistener(){
+@Override
+publicvoidonClick(Viewv){
+if(cbS.isChecked())
+etS.setPaintFlags(etS.getPaintFlags()I
+
+Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et5.setPaintFlags(et5.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+
+ 
+});
+
+booleancbValue6=prefs.getBoolean("CHECKBOX6",false);
+cb6.setChecked(cbValue6);
+if(cb6.isChecked())
+	et6.setPaintFlags(et6.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb6.setOnClicklistener(newView.OnClicklistener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb6.isChecked())
+	et6.setPaintFlags(et6.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et6.setPaintFlags(et6.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+booleancbValue7=prefs.getBoolean("CHECKBOX7",false);
+cb7.setChecked(cbValue7);
+if(cb7.isChecked())
+	et7.setPaintFlags(et7.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb7.setOnClicklistener(newView.OnClicklistener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb7.isChecked())
+	et7.setPaintFlags(et7.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et7.setPaintFlags(et7.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+
+booleancbValue8=prefs.getBoolean("CHECKBOX8",false);
+cb8.setChecked(cbValue8);
+if(cb8.isChecked())
+	et8.setPaintFlags(et8.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb8.setOnClickListener(newView.OnClickListener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb8.isChecked())
+
+	et8.setPaintFlags(et8.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et8.setPaintFlags(et8.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+booleancbValue9=prefs.getBoolean("CHECKBOX9",false);
+cb9.setChecked(cbValue9);
+if(cb9.isChecked())
+	et9.setPaintFlags(et9.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb9.setOnClickListener(newView.OnClickListener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb9.isChecked())
+	et9.setPaintFlags(et9.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et9.setPaintFlags(et9.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+
+booleancbValue10=prefs.getBoolean("CHECKBOX10",false
+);
+cb10.setChecked(cbValue10);
+if(cb10.isChecked())
+	et10.setPaintFlags(et10.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb10.setOnClicklistener(newView.OnClicklistener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb10.isChecked())
+	et10.setPaintFlags(et10.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et10.setPaintFlags(et10.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+
+booleancbValuell=prefs.getBoolean("CHECKBOXll",false
+);
+cbll.setChecked(cbValuell);
+if(cbll.isChecked())
+	etll.setPaintFlags(etll.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cbll.setOnClicklistener(newView.OnClicklistener(){
+
+@Override
+publicvoidonClick(Viewv){
+if(cbll.isChecked())
+	etll.setPaintFlags(etll.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+etll.setPaintFlags(etll.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+
+booleancbValue12=prefs.getBoolean("CHECKBOX12",false
+);
+cb12.setChecked(cbValue12);
+if(cb12.isChecked())
+	et12.setPaintFlags(et12.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb12.setOnClickListener(newView.OnClickListener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb12.isChecked())
+	et12.setPaintFlags(et12.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et12.setPaintFlags(et12.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+
+booleancbValue13=prefs.getBoolean("CHECKBOX13",false
+);
+cb13.setChecked(cbValue13);
+if(cb13.isChecked())
+	et13.setPaintFlags(et13.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb13.setOnClickListener(newView.OnClickListener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb13.isChecked())
+	et13.setPaintFlags(et13.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et13.setPaintFlags(et13.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+
+booleancbValue14=prefs.getBoolean("CHECKBOX14",false
+);
+cb14.setChecked(cbValue14);
+
+if(cb14.isChecked())
+	et14.setPaintFlags(et14.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb14.setOnClicklistener(newView.OnClicklistener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb14.isChecked())
+	et14.setPaintFlags(et14.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et14.setPaintFlags(et14.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+
+booleancbValue15=prefs.getBoolean("CHECKBOX15",false
+);
+cb15.setChecked(cbValue15);
+if(cb15.isChecked())
+	et15.setPaintFlags(et15.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb15.setOnClickListener(newView.OnClicklistener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb15.isChecked())
+	et15.setPaintFlags(et15.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et15.setPaintFlags(et15.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+
+booleancbValue16=prefs.getBoolean("CHECKBOX16",false
+);
+cb16.setChecked(cbValue16);
+if(cb16.isChecked())
+	et16.setPaintFlags(et16.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb16.setOnClickListener(newView.OnClickListener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb16.isChecked())
+	et16.setPaintFlags(et16.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et16.setPaintFlags(et16.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+
+
+booleancbValue17=prefs.getBoolean("CHECKBOX17",false
+);
+cb17.setChecked(cbValue17);
+if(cb17.isChecked())
+	et17.setPaintFlags(et17.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb17.setOnClicklistener(newView.OnClicklistener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb17.isChecked())
+	et17.setPaintFlags(et17.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et17.setPaintFlags(et17.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+
+booleancbValue18=prefs.getBoolean("CHECKBOX18",false
+);
+cb18.setChecked(cbValue18);
+if(cb18.isChecked())
+	et18.setPaintFlags(et18.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb18.setOnClicklistener(newView.OnClicklistener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb18.isChecked())
+	et18.setPaintFlags(et18.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et18.setPaintFlags(et18.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+
+booleancbValue19=prefs.getBoolean("CHECKBOX19",false
+);
+cb19.setChecked(cbValue19);
+if(cb19.isChecked())
+	et19.setPaintFlags(et19.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb19.setOnClickListener(newView.OnClicklistener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb19.isChecked())
+	et19.setPaintFlags(et19.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+
+et19.setPaintFlags(et19.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+
+booleancbValue20=prefs.getBoolean("CHECKBOX20",false
+);
+cb20.setChecked(cbValue20);
+if(cb20.isChecked())
+	et20.setPaintFlags(et20.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb20.setOnClickListener(newView.OnClickListener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb20.isChecked())
+	et20.setPaintFlags(et20.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et20.setPaintFlags(et20.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+booleancbValue21=prefs.getBoolean("CHECKBOX21",false
+);
+cb21.setChecked(cbValue21);
+if(cb21.isChecked())
+	et21.setPaintFlags(et21.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb21.setOnClicklistener(newView.OnClicklistener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb21.isChecked())
+	et21.setPaintFlags(et21.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et21.setPaintFlags(et21.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+booleancbValue22=prefs.getBoolean("CHECKBOX22",false
+);
+cb22.setChecked(cbValue22);
+if(cb22.isChecked())
+	et22.setPaintFlags(et22.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb22.setOnClicklistener(newView.OnClicklistener(){
+@Override
+publicvoidonClick(Viewv){
+
+if(cb22.isChecked())
+	et22.setPaintFlags(et22.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et22.setPaintFlags(et22.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+
+booleancbValue23=prefs.getBoolean("CHECKBOX23",false
+);
+cb23.setChecked(cbValue23);
+if(cb23.isChecked())
+	et23.setPaintFlags(et23.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb23.setOnClickListener(newView.OnClickListener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb23.isChecked())
+	et23.setPaintFlags(et23.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et23.setPaintFlags(et23.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+
+booleancbValue24=prefs.getBoolean("CHECKBOX24",false
+);
+cb24.setChecked(cbValue24);
+if(cb24.isChecked())
+	et24.setPaintFlags(et24.getPaintFlags()I Paint. STRIKE_THRU_TEXT_FLAG);
+cb24.setOnClickListener(newView.OnClickListener(){
+@Override
+publicvoidonClick(Viewv){
+if(cb24.isChecked())
+	et24.setPaintFlags(et24.getPaintFlags()I Paint.STRIKE_THRU_TEXT_FLAG);
+else
+et24.setPaintFlags(et24.getPaintFlags
+()	&(~Paint.STRIKE_THRU_TEXT_FLAG));
+	}
+	});
+
+booleanstValuel=prefs.getBoolean("STARl",false);
+st_cbl.setChecked(stValuel);
+booleanstValue2=prefs.getBoolean("STAR2",false);
+st_cb2.setChecked(stValue2);
+booleanstValue3=prefs.getBoolean("STAR3",false);
+
+st_cb3.setChecked(stValue3);
+booleanstValue4=prefs.getBoolean("STAR4",false);
+st_cb4.setChecked(stValue4);
+booleanstValue5=prefs.getBoolean("STARS",false);
+st_cb5.setChecked(stValue5);
+booleanstValue6=prefs.getBoolean("STAR6",false);
+st_cb6.setChecked(stValue6);
+booleanstValue7=prefs.getBoolean("STAR7",false);
+st_cb7.setChecked(stValue7);
+booleanstValue8=prefs.getBoolean("STAR8",false);
+st_cb8.setChecked(stValue8);
+booleanstValue9=prefs.getBoolean("STAR9",false);
+st_cb9.setChecked(stValue9);
+booleanstValue10=prefs.getBoolean("STAR10",false);
+st_cb10.setChecked(stValue10);
+booleanstValuell=prefs.getBoolean("STARll'',false);
+st_cbll.setChecked(stValuell);
+booleanstValue12=prefs.getBoolean("STAR12",false);
+st_cb12.setChecked(stValue12);
+booleanstValue13=prefs.getBoolean("STAR13'',false);
+st_cb13.setChecked(stValue13);
+booleanstValue14=prefs.getBoolean("STAR14",false);
+st_cb14.setChecked(stValue14);
+booleanstValue15=prefs.getBoolean("STAR15'',false);
+st_cb15.setChecked(stValue15);
+booleanstValue16=prefs.getBoolean("STAR16'',false);
+st_cb16.setChecked(stValue16);
+booleanstValue17=prefs.getBoolean("STAR17'',false);
+st_cb17.setChecked(stValue17);
+booleanstValue18=prefs.getBoolean("STAR18'',false);
+st_cb18.setChecked(stValue18);
+booleanstValue19=prefs.getBoolean("STAR19'',false);
+st_cb19.setChecked(stValue19);
+booleanstValue20=prefs.getBoolean("STAR20",false);
+st_cb20.setChecked(stValue20);
+booleanstValue21=prefs.getBoolean("STAR21'',false);
+st_cb21.setChecked(stValue21);
+booleanstValue22=prefs.getBoolean("STAR22",false);
+st_cb22.setChecked(stValue22);
+booleanstValue23=prefs.getBoolean("STAR23'',false);
+st_cb23.setChecked(stValue23);
+booleanstValue24=prefs.getBoolean("STAR24",false);
+st_cb24.setChecked(stValue24);
+	}
+
+privatevoidsavePrefs(Stringkey,booleanvalue){
+	SharedPreferences prefs= getApplicationContext(). getSharedPreferences("prf",MODE_PRIVATE);
+SharedPreferences.Editoreditor=prefs.edit();
+editor.putBoolean(key,value);
+
+editor.commit();
+	}
+
+publicvoidsave_cbs(Viewview){
+Stringtxt_etl=etl.getText().toString();
+Stringtxt_et2=et2.getText().toString();
+Stringtxt_et3=et3.getText().toString();
+Stringtxt_et4=et4.getText().toString();
+Stringtxt_et5=et5.getText().toString();
+Stringtxt_et6=et6.getText().toString();
+Stringtxt_et7=et7.getText().toString();
+Stringtxt_et8=et8.getText().toString();
+Stringtxt_et9=et9.getText().toString();
+Stringtxt_et10=et10.getText().toString();
+Stringtxt_etll=etll.getText().toString();
+Stringtxt_et12=et12.getText().toString();
+Stringtxt_et13=et13.getText().toString();
+Stringtxt_et14=et14.getText().toString();
+Stringtxt_et15=et15.getText().toString();
+Stringtxt_et16=et16.getText().toString();
+Stringtxt_et17=et17.getText().toString();
+Stringtxt_et18=et18.getText().toString();
+Stringtxt_et19=et19.getText().toString();
+Stringtxt_et20=et20.getText().toString();
+Stringtxt_et21=et21.getText().toString();
+Stringtxt_et22=et22.getText().toString();
+Stringtxt_et23=et23.getText().toString();
+Stringtxt_et24=et24.getText().toString();
+
+		SharedPreferencesprefs=getApplicationContext(). getSharedPreferences("prf",MODE_PRIVATE);
+	SharedPreferences.Editoreditor=prefs.edit();
+editor.putString("s1",txt_etl);
+editor.putString("s2",txt_et2);
+editor.putString("s3",txt_et3);
+editor.putString("s4",txt_et4);
+editor.putString("s5",txt_et5);
+editor.putString("s6",txt_et6);
+editor.putString("s7",txt_et7);
+editor.putString("s8",txt_et8);
+editor.putString("s9",txt_et9);
+editor.putString("s10",txt_et10);
+editor.putString("s11",txt_etll);
+editor.putString("s12",txt_et12);
+editor.putString("s13",txt_et13);
+editor.putString("s14",txt_et14);
+editor.putString("s15",txt_et15);
+editor.putString("s16",txt_et16);
+editor.putString("s17",txt_et17);
+editor.putString("s18",txt_et18);
+editor.putString("s19",txt_et19);
+editor.putString("s20",txt_et20);
+editor.putString("s21",txt_et21);
+editor.putString("s22",txt_et22);
+editor.putString("s23",txt_et23);
+editor.putString("s24",txt_et24);
+editor.apply();
+savePrefs("CHECKBOXl",cbl.isChecked());
+savePrefs("CHECKBOX2",cb2.isChecked());
+savePrefs("CHECKBOX3",cb3.isChecked());
+savePrefs("CHECKBOX4",cb4.isChecked());
+savePrefs("CHECKBOXS",cb5.isChecked());
+savePrefs("CHECKBOXG",cb6.isChecked());
+savePrefs("CHECKBOX7",cb7.isChecked());
+savePrefs("CHECKBOX8",cb8.isChecked());
+savePrefs("CHECKBOX9",cb9.isChecked());
+savePrefs("CHECKBOX10",cb10.isChecked());
+savePrefs("CHECKBOXll",cbll.isChecked());
+savePrefs("CHECKBOX12",cb12.isChecked());
+savePrefs("CHECKBOX13",cb13.isChecked());
+savePrefs("CHECKBOX14",cb14.isChecked());
+savePrefs("CHECKBOXlS",cb15.isChecked());
+savePrefs("CHECKBOXlG",cb16.isChecked());
+savePrefs("CHECKBOX17",cb17.isChecked());
+savePrefs("CHECKBOX18",cb18.isChecked());
+savePrefs("CHECKBOX19",cb19.isChecked());
+savePrefs("CHECKBOX20",cb20.isChecked());
+savePrefs("CHECKBOX21",cb21.isChecked());
+savePrefs("CHECKBOX22",cb22.isChecked());
+savePrefs("CHECKBOX23",cb23.isChecked());
+savePrefs("CHECKBOX24",cb24.isChecked());
+savePrefs("STARl",st_cbl.isChecked());
+savePrefs("STAR2",st_cb2.isChecked());
+savePrefs("STAR3",st_cb3.isChecked());
+savePrefs("STAR4",st_cb4.isChecked());
+savePrefs("STARS",st_cb5.isChecked());
+savePrefs("STARG",st_cb6.isChecked());
+savePrefs("STAR7",st_cb7.isChecked());
+savePrefs("STAR8",st_cb8.isChecked());
+savePrefs("STAR9",st_cb9.isChecked());
+savePrefs("STAR10",st_cb10.isChecked());
+savePrefs("STARll",st_cbll.isChecked());
+savePrefs("STAR12",st_cb12.isChecked());
+savePrefs("STAR13",st_cb13.isChecked());
+savePrefs("STAR14",st_cb14.isChecked());
+savePrefs("STARlS",st_cb15.isChecked());
+savePrefs("STARlG",st_cb16.isChecked());
+savePrefs("STAR17",st_cb17.isChecked());
+savePrefs("STAR18",st_cb18.isChecked());
+savePrefs("STAR19",st_cb19.isChecked());
+savePrefs("STAR20",st_cb20.isChecked());
+savePrefs("STAR21",st_cb21.isChecked());
+savePrefs("STAR22",st_cb22.isChecked());
+savePrefs("STAR23",st_cb23.isChecked());
+savePrefs("STAR24",st_cb24.isChecked());
+
+
+}
+
+}
+
+
+
+
+packagecom.pl7k41a05g6.mad_courseproject;
+
+importandroidx.appcompat.app.AlertDialog;
+importandroidx.appcompat.app.AppCompatActivity;
+
+importandroid.content.Intent;
+importandroid.database.Cursor;
+importandroid.cs.Bundle;
+importandroid.view.View;
+importandroid.widget.TextView;
+
+ public class MainActivityextends AppCompatActivity{ 13
+DatabaseHelperdb;
+TextViewuser_name;
+
+@Override
+protectedvoidonCreate(BundlesavedinstanceState){
+super.onCreate(savedinstanceState);
+setContentView(R.layout.activity_main);
+db=newDatabaseHelper(this);
+user_name=findViewByid(R.id.user_name);
+Stringid=Integer.toString(l);
+Cursorresult=db.getDataByid(id);
+Stringdata=null;
+if(result.moveToFirst()){
+data=result.getString(l);
+	}
+user_name.setText("Hello,"+data);
+	}
+
+publicvoidsch(Viewview){
+Intenti=newIntent(this,sch_week.class);
+startActivity(i);
+	}
+
+publicvoidgoto_list(Viewview){
+Intenti=newIntent(this,create_list.class);
+startActivity(i);
+	}
+
+publicvoidacc_details(Viewview){
+Cursorresults=db.viewAllData();
+if(results.getCount()==0){
+showMessage("Error","Nodatafound");
+return;
+}else{
+StringBufferdata=newStringBuffer();
+while(results.moveToNext()){
+//data.append("Id:"+resuLts.getString(e)+"\n");
+
+
+
+
+data.append("Username
+"+results.getString(l
+
+)+"\n\n");
+
+
+
+
+
+
+data.append("Password
+"+results.getString(2
+
+)+"\n\n");
+
+
+
+
+
+}
+
+
+
+	showMessage("Yourusernameandpassword",data.
+toString());
+	}
+	}
+
+privatevoidshowMessage(StringmsgType,Stringmsg){
+AlertDialog.Builderbuilder=newAlertDialog.Builder(
+this);
+
+
+builder.create();
+
+
+
+builder.setCancelable(true);
+
+
+
+builder.seticon(R.mipmap.ic_launcher);
+
+
+
+builder.setTitle(msgType);
+
+
+
+builder.setMessage(msg);
+
+
+
+builder.show();
+
+
+}
+
+
+
+	publicvoidedit_details(Viewview){
+
+
+
+Intenti=newIntent(this,edit_details.class);
+
+
+
+startActivity(i);
+
+71
+}
+
+
+72}
